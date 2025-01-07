@@ -1,0 +1,13 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -55,6 +55,7 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="npm.server" />
++        <item itemvalue="npm.server" />
+       </list>
+     </recent_temporary>
+   </component>
