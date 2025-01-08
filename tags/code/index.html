@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | qp blog</title>
+    <title>Tags: code | qp blog</title>
     <meta name="author" content="Zefei Xie" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -39,8 +39,6 @@
 <script src="/js/lib/preview.js"></script>
 
 
-
-<script src="/js/lib/search.js"></script>
 
 
 
@@ -152,43 +150,55 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
+            <div id="archives">
     
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+    <div class="categories-tags">
         
-        <div class="timeline" data-title="helloworld">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/1/7</div>
-                <a href="/2025/01/07/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/code/" style="color: #00a596">
-                                code
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+        
+        
+        <span>
+            <a href="/tags/code/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                code
+            </a>
+        </span>
+        
+        
+        
         
     </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2025/1/7</div>
+            <a href="/2025/01/07/hello-world/">
+                <h3>Hello World</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/code/" style="color: #03a9f4">
+                            code
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
 </div>
 
             <footer id="footer">
