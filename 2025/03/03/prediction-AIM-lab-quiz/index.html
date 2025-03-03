@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AIM Lab CW1 Prediction | qp blog</title>
+    <meta name="author" content="Zefei Xie" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/img.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>The loading is slow, please enable the cache.</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>QP BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;QP BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>AIM Lab CW1 Prediction</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/3/3
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/academic/" style="color: #03a9f4">
+                    academic
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/review/" style="color: #ff7d73">
+                    review
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="Week-1"><a href="#Week-1" class="headerlink" title="Week 1"></a>Week 1</h2><h3 id="Lab-Code"><a href="#Lab-Code" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>The RandomBitFlipHeuristic:</p>
+<pre><code class="language-java">public void applyHeuristic(SAT problem) &#123;
+    // Select a random bit to flip
+   int randomIndex = random.nextInt(problem.getNumberOfVariables());
+   problem.bitFlip(randomIndex, CURRENT_SOLUTION_INDEX);
+&#125;
+</code></pre>
+<h3 id="Lab-Quiz"><a href="#Lab-Quiz" class="headerlink" title="Lab Quiz"></a>Lab Quiz</h3><p>In week1, the lab quiz was just all about the introduction of the api and the basis for the question, the Max-SAT problem concept.</p>
+<ol>
+<li><p><strong>Max-SAT</strong> is a problem in computer science that involves finding a solution to a boolean satisfiability problem (SAT) by finding a subset of the variables that satisfy all the clauses in the SAT problem. The goal is to find a solution that maximizes the number of satisfied clauses. The Max-SAT problem is NP-complete, meaning that it is not possible to solve in polynomial time for all possible inputs. However, there are many heuristics that can be used to solve the problem efficiently in practice.</p>
+<p>ex. (A ∨ ¬B) ∧ (B ∨ C) ∧ (¬A ∨ ¬C)</p>
+</li>
+<li><p>In the lab, a very important concept of the <strong>Random</strong> was given. That is the value of the random function is not actually random, but is determined by a seed value. This seed value is used to generate a sequence of pseudo-random numbers that can be used for various purposes, such as generating random numbers, selecting random elements from a set, and shuffling a list. The seed value can be set to a fixed value to produce a deterministic sequence of pseudo-random numbers, or it can be set to a random value to produce a different sequence each time the program is run. Therefore, if the seed value is not changed in each trial, it will always give us the same solution.</p>
+</li>
+</ol>
+<h3 id="Question-Quiz"><a href="#Question-Quiz" class="headerlink" title="Question Quiz"></a>Question Quiz</h3><ol>
+<li><p><strong>Concept</strong>: </p>
+<ul>
+<li><p><strong>Open</strong> decision support system (depend on the environment), <strong>Close</strong> decision support system (independent),</p>
+</li>
+<li><p><strong>effective</strong> (can find the best solution), efficient (fast).</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Concept</strong>: </p>
+<ul>
+<li><p><strong>Stochastic</strong> searching  method (vary from time to time), <strong>deterministic</strong> searching method (always the same result), </p>
+</li>
+<li><p><strong>perturbative</strong> searching method (start with a complete solution and gradually change it), <strong>constructive</strong> searching method (start with an partial solution and gradually build it).</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Concept</strong>: </p>
+<p><strong>Exact methods</strong></p>
+<ul>
+<li>Dynamic programming, Branch and Bound, Constraint Satisfaction </li>
+<li>Systematically traverse the search space.</li>
+<li>Has optimality guarantees</li>
+</ul>
+<p><strong>Inexact methods</strong></p>
+<ul>
+<li>Heuristics&#x2F;Metaheuristics&#x2F;Hyper-heuristics</li>
+<li>Sample the search space through neighbourhood operators.  No optimality guarantees.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Week-2"><a href="#Week-2" class="headerlink" title="Week 2"></a>Week 2</h2><h3 id="Lab-Code-1"><a href="#Lab-Code-1" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>Steepest Descent Hill Climbing:</p>
+<pre><code class="language-java">public void applyHeuristic(SAT problem) &#123;
+    double bestEval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+    int bestIndex = 0;
+    boolean improved = false;
+
+    for (int j = 0; j &lt; problem.getNumberOfVariables(); j++) &#123;
+        problem.bitFlip(j, CURRENT_SOLUTION_INDEX);
+        double eval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+
+        if (eval &lt; bestEval) &#123;
+            bestIndex = j;
+            bestEval = eval;
+            improved = true;
+        &#125;
+        problem.bitFlip(j, CURRENT_SOLUTION_INDEX);
+    &#125;
+
+    if (improved) &#123;
+        problem.bitFlip(bestIndex, CURRENT_SOLUTION_INDEX);
+    &#125;
+&#125;
+</code></pre>
+<p>Davis’s Bit Hill Climbing:</p>
+<pre><code class="language-java">public void applyHeuristic(SAT problem) &#123;
+    double bestEval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+    int[] perm = new int[problem.getNumberOfVariables()];
+
+    for (int i = 0; i &lt; problem.getNumberOfVariables(); i++) &#123;
+        perm[i] = i;
+    &#125;
+    perm = ArrayMethods.shuffle(perm, random);
+
+    for (int j = 0; j &lt; problem.getNumberOfVariables(); j++) &#123;
+        problem.bitFlip(perm[j], CURRENT_SOLUTION_INDEX);
+        double tempEval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+
+        if (tempEval &lt;= bestEval) &#123;
+            bestEval = tempEval;
+        &#125; else &#123;
+            problem.bitFlip( perm[j], CURRENT_SOLUTION_INDEX);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="Lab-Quiz-1"><a href="#Lab-Quiz-1" class="headerlink" title="Lab Quiz"></a>Lab Quiz</h3><p>In week2, the lab is focusing on Steepest Descent Hill Climbing and Davis’s Bit Hill Climbing.</p>
+<ol>
+<li><strong>Steepest Descent Hill Climbing</strong> is a local search algorithm that starts with a random solution and only change the most significant bit that decreases the objective function value. It is a simple and effective algorithm that can find a good solution in a short time. However, it may not find the global optimum.</li>
+<li><strong>David’s Bit Hill Climbing</strong> is a local search algorithm that will initially create a random permutation of the changing indexes list, and improve the solution gradually.</li>
+</ol>
+<p>If we change the heuristic to <strong>better or equal than</strong> the current solution:</p>
+<p>Correct answers would identify that DBHC performs better accepting non-worsening moves; however, SDHC could perform different based on the acceptance criteria.</p>
+<p>For DBHC this includes not getting stuck on shoulder regions, whereas for SDHC this is down to two factors. In one case, we may be able to move over the shoulder regions leading to better performance, but in the other case, preferring to change the latter variable assignments may lead to getting stuck in regions of the search space with poor quality solutions as compared to flipping earlier variable assignments.</p>
+<h2 id="Week-3"><a href="#Week-3" class="headerlink" title="Week 3"></a>Week 3</h2><h3 id="Lab-Code-2"><a href="#Lab-Code-2" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>Iterated Local Search:</p>
+<pre><code class="language-java">protected void runMainLoop() &#123;
+    for (int i = 0; i &lt; iIntensityOfMutation; i++) &#123;
+        // apply mutation heuristic
+       oMutationHeuristic.applyHeuristic(problem);
+    &#125;
+    for (int i = 0; i &lt; iDepthOfSearch; i++) &#123;
+        oLocalSearchHeuristic.applyHeuristic(problem);
+    &#125;
+    double backEval = problem.getObjectiveFunctionValue(BACKUP_SOLUTION_INDEX);
+    double newEval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+
+    if (newEval &lt;= backEval) &#123;
+        // accept new solution
+       problem.copySolution(CURRENT_SOLUTION_INDEX, BACKUP_SOLUTION_INDEX);
+    &#125;else&#123;
+        // reject new solution
+       problem.copySolution(BACKUP_SOLUTION_INDEX, CURRENT_SOLUTION_INDEX);
+    &#125;
+&#125;
+</code></pre>
+<h2 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h2><h3 id="Lab-Code-3"><a href="#Lab-Code-3" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>Simulated Annealing:</p>
+<pre><code class="language-java">protected void runMainLoop() &#123;
+    double temperature = oCoolingSchedule.getCurrentTemperature();
+    double eval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+
+    // Select a random bit to flip
+   int randomIndex = random.nextInt(problem.getNumberOfVariables());
+   problem.bitFlip(randomIndex, CURRENT_SOLUTION_INDEX);
+   double newEval = problem.getObjectiveFunctionValue(CURRENT_SOLUTION_INDEX);
+   double delta = newEval - eval;
+   double probability = Math.exp(-delta/temperature);
+
+   // If the new solution is better or the probability is higher, accept it
+   if (delta &lt; 0 || random.nextDouble() &lt; probability) &#123;
+       problem.bitFlip(randomIndex, BACKUP_SOLUTION_INDEX);
+   &#125;else &#123;
+       problem.bitFlip(randomIndex, CURRENT_SOLUTION_INDEX);
+   &#125;
+
+   // Update the temperature
+   oCoolingSchedule.advanceTemperature();
+&#125;
+</code></pre>
+<p>Geometric Cooling Schedule:</p>
+<pre><code class="language-java">public void advanceTemperature() &#123;
+    dCurrentTemperature *= this.dAlpha;
+&#125;
+</code></pre>
+<p>LundyAndMees Cooling Schedule:</p>
+<pre><code class="language-java">public void advanceTemperature() &#123;
+    dCurrentTemperature =  dCurrentTemperature / ( 1 + dBeta * dCurrentTemperature );
+&#125;
+</code></pre>
+<h2 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h2><h3 id="Lab-Code-4"><a href="#Lab-Code-4" class="headerlink" title="Lab Code"></a>Lab Code</h3><h2 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h2>
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2025 - 2025 qp blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Zefei Xie
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+
+    <script src="/js/main.js"></script>
+
+    // Fireworks effect
+    <canvas
+        id="fireworks"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+    ></canvas>
+    <script src="https://s4.zstatic.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="/js/fireworks.min.js"></script>
+
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="the-lord-of-stars/the-lord-of-stars.github.io"
+    data-repo-id="R_kgDOJCquYA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJCquYM4CnfcW"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+<!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"right",mobileDisplay:true,models:[{"path":"https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/potion-Maker-Tia/index.json","mobilePosition":[0,0],"mobileScale":0.2,"mobileStageStyle":{"width":150,"height":125},"motionPreloadStrategy":"IDLE","position":[-25,0],"scale":0.4,"stageStyle":{"width":300,"height":250}}],parentElement:null,primaryColor:"var(--btn-bg)",sayHello:false,menus:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":115,"height":40,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15000,message:["Welcome to my website!"],wordTheDay:true},welcomeTips: {"message":{"morning":"Good morning!"}}}});</script><!-- hexo injector body_end end --></body>
+</html>
