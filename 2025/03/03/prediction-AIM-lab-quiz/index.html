@@ -161,14 +161,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/academic/" style="color: #00bcd4">
+                <a href="/tags/academic/" style="color: #ff7d73">
                     academic
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/review/" style="color: #ffa2c4">
+                <a href="/tags/review/" style="color: #00a596">
                     review
                 </a>
             </span>
@@ -295,6 +295,59 @@
     &#125;
 &#125;
 </code></pre>
+<h3 id="Lab-Quiz-2"><a href="#Lab-Quiz-2" class="headerlink" title="Lab Quiz"></a>Lab Quiz</h3><p>In week 3, the lab is focusing on iterated local search.</p>
+<ol>
+<li><p>Q2: </p>
+<p>ILS is only applying hill-climbing and hence has no explorative mechanisms when IOM is set to zero.</p>
+<p>“behave” is not like “perform”, behave means the outcomes could be the same, perform is more enphasizing the procedure.</p>
+</li>
+<li><p>Q4:</p>
+<p><strong>tail selection</strong>: you should choose 1 tail when you want to know the direction of the data (&gt; or &lt;)</p>
+<p>and you should choose 2 tail if you want to know if there is a difference between 2 set of data.</p>
+<p><strong>Test type:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>data</th>
+<th>scene</th>
+<th>Critera</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T test</td>
+<td>independent&#x2F;paired</td>
+<td>focus on mean difference</td>
+<td>mean</td>
+</tr>
+<tr>
+<td>Wilcoxon SIgned Rank Test</td>
+<td>paired</td>
+<td>not Gaussian distribution</td>
+<td>middle value</td>
+</tr>
+<tr>
+<td>Mann-Whitney U test</td>
+<td>independent</td>
+<td>not Gaussian distribution</td>
+<td>middle value</td>
+</tr>
+<tr>
+<td>Sign Test</td>
+<td>paired</td>
+<td>focus on direction</td>
+<td>middle value</td>
+</tr>
+</tbody></table>
+<p><strong>P value:</strong> when p value is big (usually &gt;&#x3D; 0.05) then we can not disagree the h0: the 2 data sets are identical. only when p value is &lt; than 0.05 then we can use the relevant critera to decide which method is better&#x2F; worse. </p>
+</li>
+<li><p>Q5:<br>The behaviour of ILS with different components can be totally different and hence may require entirely different configurations for IOM and DOS</p>
+</li>
+<li><p>Q7:</p>
+<p>The first is that the combination of SDHC with the 1-bit flip neighbourhood is not ideal as SDHC flipping a single bit that leads to the most improvement can easily undo changes by the mutation operator.</p>
+<p>The second point makes a comparison of SDHC and DBHC in terms of their efficiency and effectiveness (see ILS design guidelines from lecture 3). Both hill-climbing heuristics make the same number of function evaluations per pass (take the same computational budget) however DBHC is able in theory to modify [0,n) bits whereas SDHC can only modify [0,1] bits; hence SDHC is less efficient than DBHC.</p>
+</li>
+</ol>
 <h2 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h2><h3 id="Lab-Code-3"><a href="#Lab-Code-3" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>Simulated Annealing:</p>
 <pre><code class="language-java">protected void runMainLoop() &#123;
     double temperature = oCoolingSchedule.getCurrentTemperature();
@@ -328,7 +381,248 @@
     dCurrentTemperature =  dCurrentTemperature / ( 1 + dBeta * dCurrentTemperature );
 &#125;
 </code></pre>
-<h2 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h2><h3 id="Lab-Code-4"><a href="#Lab-Code-4" class="headerlink" title="Lab Code"></a>Lab Code</h3><h2 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h2>
+<h3 id="Lab-Quiz-3"><a href="#Lab-Quiz-3" class="headerlink" title="Lab Quiz"></a>Lab Quiz</h3><p>This week lab is relative simple, it is only focusing on the Simulated Annealing: </p>
+<ul>
+<li>The algorithm is allowed to occasionally accept a poor solution (that is, a solution worse than the current one), thus jumping out of the local optimal.</li>
+<li>By decreasing the temperature parameter (T), the probability of accepting the poor solution is reduced, so that the solution gradually converges to the global optimal.</li>
+</ul>
+<p>The key to solve the quiz is that the alpha for geometric cooling schema should be very close to 1 (ex. 0.99998). If the temperature get cooled so fast then the algorithm will just become the IE algorithm. Similarly, the beta for LundyAndMees Cooling Schema should be very small (ex. 0.00001).</p>
+<h2 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h2><h3 id="Lab-Code-4"><a href="#Lab-Code-4" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>Memetic Algorithm:</p>
+<pre><code class="language-java">public void runMainLoop() &#123;
+    for(int iIterationCount = 0; iIterationCount &lt; POPULATION_SIZE; iIterationCount += 2) &#123;
+        int iParent1, iParent2;
+        iParent1 = p1Selection.parentSelection();
+        iParent2 = p2Selection.parentSelection();
+        if(iParent1 == iParent2) &#123;
+            iParent2 = (iParent1 + 1) % POPULATION_SIZE;
+        &#125;
+        int iChild1 = POPULATION_SIZE + iIterationCount;
+        int iChild2 = POPULATION_SIZE + iIterationCount +1;
+        crossover.applyHeuristic(iParent1, iParent2, iChild1, iChild2);
+        mutation.applyHeuristic(iChild1);
+        localSearch.applyHeuristic(iChild1);
+        mutation.applyHeuristic(iChild2);
+        localSearch.applyHeuristic(iChild2);
+    &#125;
+    // not forgetting to do replacement of the population AFTER all offspring are produced
+   replacement.doReplacement(problem, POPULATION_SIZE);
+&#125;
+</code></pre>
+<p>Crossover (UniformXO):</p>
+<pre><code class="language-java">public void applyHeuristic(int parent1Index, int parent2Index,
+			int child1Index, int child2Index) &#123;
+    problem.copySolution(parent1Index, child1Index);
+    problem.copySolution(parent2Index, child2Index);
+
+    for(int i = 0; i &lt; problem.getNumberOfVariables(); i++) &#123;
+        if(random.nextDouble() &lt; 0.5) &#123;
+            problem.exchangeBits(child1Index, child2Index, i);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>Selection (Tournament Selection):</p>
+<pre><code class="language-java">public int parentSelection() &#123;
+	int bestIndex = -1;
+	double bestFitness = Double.MAX_VALUE;
+
+	//create list of random indices
+	int[] indices = ArrayMethods.shuffle(aiParentIndices, oRandom);
+
+	// select from the first tournamentSize elements
+	for(int i = 0; i &lt; iTournamentSize; i++) &#123;
+		int sol = indices[i];
+		double fitness = oProblem.getObjectiveFunctionValue(sol);
+
+		// don&#39;t need to be concerned about selecting randomly from multiple best
+		// solutions as the tournamentSize parents were already randomised.
+		if(fitness &lt; bestFitness) &#123;
+			bestFitness = fitness;
+			bestIndex = sol;
+		&#125;
+	&#125;
+
+	return bestIndex;
+&#125;
+</code></pre>
+<p>Replacement (TransGenerational Replacement):</p>
+<pre><code class="language-java">protected int[] getNextGeneration(SAT oProblem, int iPopulationSize) &#123;
+
+		// total population size is size of parent population plus size of offspring population
+		int iTotalPopulationSize = iPopulationSize &lt;&lt; 1;
+
+		// offspring indices are from &#39;populationSize&#39; inclusive to &#39;populationSize * 2&#39; exclusive.
+		int[] aiOffspringMemoryIndices = IntStream.range(iPopulationSize, iTotalPopulationSize).toArray();
+
+		// see if the best solution is in the current population or offspring population
+		double dBestSolutionCost = Double.MAX_VALUE;
+		double dWorstOffspringCost = -Double.MAX_VALUE;
+		int bestIndex = -1;
+		int worstOffspringIndex = -1;
+
+		// evaluate the objective function value (cost) of each solution from both parent and offspring populations
+		for(int iMemoryIndex = 0; iMemoryIndex &lt; iTotalPopulationSize; iMemoryIndex++) &#123;
+
+			double dSolutionCost = oProblem.getObjectiveFunctionValue(iMemoryIndex);
+
+			// update index of the best solution, favouring offspring solutions
+			if( dSolutionCost &lt;= dBestSolutionCost ) &#123;
+				dBestSolutionCost = dSolutionCost;
+				bestIndex = iMemoryIndex;
+			&#125;
+
+			// keep track of the worst solution in the offspring population
+			if( iMemoryIndex &gt;= iPopulationSize &amp;&amp; dSolutionCost &gt; dWorstOffspringCost) &#123;
+
+				worstOffspringIndex = iMemoryIndex;
+				dWorstOffspringCost = dSolutionCost;
+			&#125;
+		&#125;
+
+		// if best solution is in parent population, replace worst in offspring with best from parents
+		if(bestIndex &lt; iPopulationSize) &#123;
+
+			aiOffspringMemoryIndices[worstOffspringIndex - iPopulationSize] = bestIndex;
+		&#125;
+
+		// return array of memory locations for replacement
+		return aiOffspringMemoryIndices;
+	&#125;
+</code></pre>
+<h3 id="Lab-Quiz-4"><a href="#Lab-Quiz-4" class="headerlink" title="Lab Quiz"></a>Lab Quiz</h3><p>This week lab is focusing on the genetic algorithm:</p>
+<p><strong>Population Initialization</strong></p>
+<ul>
+<li>Generate a set of random individuals (solutions) as the initial population.</li>
+</ul>
+<p><strong>Fitness Evaluation</strong></p>
+<ul>
+<li>Compute the fitness of each individual to measure the quality of its solution.</li>
+</ul>
+<p><strong>Selection</strong></p>
+<ul>
+<li>Select individuals with higher fitness to enter the next generation (simulating natural selection).</li>
+</ul>
+<p><strong>Crossover</strong></p>
+<ul>
+<li>Choose two parent individuals to exchange genetic material and generate new offspring (simulating biological reproduction).</li>
+</ul>
+<p><strong>Mutation</strong></p>
+<ul>
+<li>Introduce small random changes in individuals with a low probability (simulating genetic mutation).</li>
+</ul>
+<p><strong>New Generation Formation</strong></p>
+<ul>
+<li>Replace the old population with the new one and repeat the iteration until the termination condition is met (e.g., reaching the maximum number of generations or convergence).</li>
+</ul>
+<ol>
+<li><p>Q3:</p>
+<p>Memetic algorithm: add local search part (hill climbing) to optimize the children.</p>
+<p>ex:</p>
+</li>
+</ol>
+<p>​	<em>A [named] statistical test was conducted to test whether the median performance of the GA and MA perform significantly different from each other. The experiments were run for a total of 31 trials with the GA using 1000 generations and the MA using 250 generations respectively resulting in a total runtime of 10 seconds each. The result of performing the [named] test shows that the MA performs significantly better than the GA with a p-value &#x3D; 0.00018 and the GA and MA obtaining median results of 81 and 24 respectively”.</em></p>
+<h2 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h2><h3 id="Lab-Code-5"><a href="#Lab-Code-5" class="headerlink" title="Lab Code"></a>Lab Code</h3><p>Simple Inheritance:</p>
+<pre><code class="language-java">public void performMemeticInheritance(int parent1Index, int parent2Index, int child1Index, int child2Index) &#123;
+	double v1 = problem.getObjectiveFunctionValue(parent1Index);
+	double v2 = problem.getObjectiveFunctionValue(parent2Index);
+	int number = problem.getNumberOfMemes();
+  
+  // if same then choose parent randomly
+	if (v1 == v2) &#123;
+		int inheritIndex = rng.nextDouble() &lt; 0.5 ? parent1Index : parent2Index;
+		for (int i = 0; i &lt; number; i++) &#123;
+			problem.getMeme(child1Index, i).setMemeOption(problem.getMeme(inheritIndex, i).getMemeOption());
+			problem.getMeme(child2Index, i).setMemeOption(problem.getMeme(inheritIndex, i).getMemeOption());
+		&#125;
+  // if &lt; choose parent 1  
+	&#125; else if (v1 &lt; v2) &#123;
+		for (int i = 0; i &lt; number; i++) &#123;
+			problem.getMeme(child1Index, i).setMemeOption(problem.getMeme(parent1Index, i).getMemeOption());
+			problem.getMeme(child2Index, i).setMemeOption(problem.getMeme(parent1Index, i).getMemeOption());
+		&#125;
+  // if &lt; choose parent 2  
+	&#125; else &#123;
+		for (int i = 0; i &lt; number; i++) &#123;
+			problem.getMeme(child1Index, i).setMemeOption(problem.getMeme(parent2Index, i).getMemeOption());
+			problem.getMeme(child2Index, i).setMemeOption(problem.getMeme(parent2Index, i).getMemeOption());
+		&#125;
+	&#125;
+&#125;
+</code></pre>
+<p>MutiMeme:</p>
+<pre><code class="language-java">public void runMainLoop() &#123;
+	for(int i = 0; i &lt; POPULATION_SIZE; i+=2) &#123;
+		// select two parents. we don&#39;t care if they are the same this week
+		int p1 = p1selection.parentSelection();
+		int p2 = p2selection.parentSelection();
+
+		// calculate child indices
+		int c1 = i + POPULATION_SIZE;
+		int c2 = c1 + 1;
+			
+		// apply crossover
+		crossover.applyHeuristic(p1, p2, c1, c2);
+
+		// inherit memeplex using simple inheritance method
+		inheritance.performMemeticInheritance(p1, p2, c1, c2);
+
+		// mutation
+		applyMutationForChildDependentOnMeme(c1, 0);
+		applyMutationForChildDependentOnMeme(c2, 0);
+
+		// local search
+		applyLocalSearchForChildDependentOnMeme(c1, 1, 2);
+		applyLocalSearchForChildDependentOnMeme(c2, 1, 2);
+
+		// mutation of memeplex
+		performMutationOfMemeplex(c1);
+		performMutationOfMemeplex(c2);
+	&#125;
+		
+	// perform replacement
+	replacement.doReplacement(problem, POPULATION_SIZE);
+&#125;
+	
+	/**
+	 * Applies mutation to the child dependent on its current meme option for mutation.
+	 * Mapping of meme option to IOM: IntensityOfMutation &lt;- memeOption;
+	 */
+public void applyMutationForChildDependentOnMeme(int childIndex, int memeIndex) &#123;
+	int iom = problem.getMeme(childIndex, memeIndex).getMemeOption();
+	mutation.setMutationRate(iom);
+	mutation.applyHeuristic(childIndex);
+&#125;
+	
+	/**
+	 * Applies the local search operator to the child as specified by its current meme option.
+	 */
+public void applyLocalSearchForChildDependentOnMeme(int childIndex, int operatorMemeIndex, int depthOfSearchMemeIndex) &#123;
+	int option = problem.getMeme(childIndex, operatorMemeIndex).getMemeOption();
+	int depth = problem.getMeme(childIndex, depthOfSearchMemeIndex).getMemeOption();
+	for (int i = 0; i &lt; depth; i++) &#123;
+		lss[option].applyHeuristic(childIndex);
+	&#125;
+&#125;
+
+	/**
+	 * Applies mutation to each meme within the memeplex of the specified solution with probability
+	 * dependent on the innovation rate.
+	 */
+public void performMutationOfMemeplex(int solutionIndex) &#123;
+	for (int i = 0; i &lt; problem.getNumberOfMemes(); i++)&#123;
+		Meme meme = problem.getMeme(solutionIndex, i);
+		int initialOption = meme.getMemeOption();
+		if (rng.nextDouble() &lt; innovationRate) &#123;
+			int newOption = rng.nextInt(meme.getTotalOptions());
+			while (newOption == initialOption)&#123;
+				newOption = rng.nextInt(meme.getTotalOptions());
+			&#125;
+			meme.setMemeOption(newOption);
+		&#125;
+	&#125;
+&#125;
+</code></pre>
+
     </div>
     
     
