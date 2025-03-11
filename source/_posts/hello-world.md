@@ -1,5 +1,8 @@
 ---
 title: Hello World
+
+date: 2025-01-03
+
 tags:
 - code
 description: |
