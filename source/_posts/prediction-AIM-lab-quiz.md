@@ -13,9 +13,17 @@ description: |
 pinned: 1
 ---
 
-## Week 1
+------
 
-### Lab Code
+<!-- toc -->
+
+------
+
+
+
+## week 1 
+
+### lab code
 The RandomBitFlipHeuristic:
 ```java
 public void applyHeuristic(SAT problem) {
@@ -25,7 +33,7 @@ public void applyHeuristic(SAT problem) {
 }
 ```
 
-### Lab Quiz
+### lab quiz
 In week1, the lab quiz was just all about the introduction of the api and the basis for the question, the Max-SAT problem concept.
 
 1. **Max-SAT** is a problem in computer science that involves finding a solution to a boolean satisfiability problem (SAT) by finding a subset of the variables that satisfy all the clauses in the SAT problem. The goal is to find a solution that maximizes the number of satisfied clauses. The Max-SAT problem is NP-complete, meaning that it is not possible to solve in polynomial time for all possible inputs. However, there are many heuristics that can be used to solve the problem efficiently in practice.
@@ -34,7 +42,7 @@ In week1, the lab quiz was just all about the introduction of the api and the ba
 
 2. In the lab, a very important concept of the **Random** was given. That is the value of the random function is not actually random, but is determined by a seed value. This seed value is used to generate a sequence of pseudo-random numbers that can be used for various purposes, such as generating random numbers, selecting random elements from a set, and shuffling a list. The seed value can be set to a fixed value to produce a deterministic sequence of pseudo-random numbers, or it can be set to a random value to produce a different sequence each time the program is run. Therefore, if the seed value is not changed in each trial, it will always give us the same solution. 
 
-### Question Quiz
+### question quiz
 
 1. **Concept**:
    
@@ -58,9 +66,9 @@ In week1, the lab quiz was just all about the introduction of the api and the ba
    - Sample the search space through neighbourhood operators. 
    - No optimality guarantees.
 
-## Week 2
+## week 2
 
-### Lab Code
+### lab code
 Steepest Descent Hill Climbing:
 ```java
 public void applyHeuristic(SAT problem) {
@@ -110,7 +118,7 @@ public void applyHeuristic(SAT problem) {
 }
 ```
 
-### Lab Quiz
+### lab quiz
 In week2, the lab is focusing on Steepest Descent Hill Climbing and Davis's Bit Hill Climbing.
 
 1. **Steepest Descent Hill Climbing** is a local search algorithm that starts with a random solution and only change the most significant bit that decreases the objective function value. It is a simple and effective algorithm that can find a good solution in a short time. However, it may not find the global optimum.
@@ -122,9 +130,9 @@ Correct answers would identify that DBHC performs better accepting non-worsening
 
 For DBHC this includes not getting stuck on shoulder regions, whereas for SDHC this is down to two factors. In one case, we may be able to move over the shoulder regions leading to better performance, but in the other case, preferring to change the latter variable assignments may lead to getting stuck in regions of the search space with poor quality solutions as compared to flipping earlier variable assignments.
 
-## Week 3
+## week 3
 
-### Lab Code
+### lab code
 Iterated Local Search:
 ```java
 protected void runMainLoop() {
@@ -148,7 +156,7 @@ protected void runMainLoop() {
 }
 ```
 
-### Lab Quiz
+### lab quiz
 
 In week 3, the lab is focusing on iterated local search.
 
@@ -184,9 +192,9 @@ In week 3, the lab is focusing on iterated local search.
 
    The second point makes a comparison of SDHC and DBHC in terms of their efficiency and effectiveness (see ILS design guidelines from lecture 3). Both hill-climbing heuristics make the same number of function evaluations per pass (take the same computational budget) however DBHC is able in theory to modify [0,n) bits whereas SDHC can only modify [0,1] bits; hence SDHC is less efficient than DBHC.
 
-## Week 4
+## week 4
 
-### Lab Code
+### lab code
 Simulated Annealing:
 ```java
 protected void runMainLoop() {
@@ -226,7 +234,7 @@ public void advanceTemperature() {
 }
 ```
 
-### Lab Quiz
+### lab quiz
 
 This week lab is relative simple, it is only focusing on the Simulated Annealing: 
 
@@ -237,9 +245,9 @@ The key to solve the quiz is that the alpha for geometric cooling schema should 
 
 
 
-## Week 5
+## week 5
 
-### Lab Code
+### lab code
 Memetic Algorithm:
 ```java
 public void runMainLoop() {
@@ -350,7 +358,7 @@ protected int[] getNextGeneration(SAT oProblem, int iPopulationSize) {
 	}
 ```
 
-### Lab Quiz
+### lab quiz
 
 This week lab is focusing on the genetic algorithm:
 
@@ -388,9 +396,9 @@ This week lab is focusing on the genetic algorithm:
 
 
 
-## Week 6
+## week 6
 
-### Lab Code
+### lab code
 
 Simple Inheritance:
 
@@ -499,7 +507,7 @@ public void performMutationOfMemeplex(int solutionIndex) {
 }
 ```
 
-### Lab Quiz
+### lab quiz
 
 This week lab is focusing on the multi-meme algorithm.
 

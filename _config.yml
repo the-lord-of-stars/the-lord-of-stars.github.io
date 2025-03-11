@@ -156,3 +156,7 @@ OhMyLive2d:
       welcomeTips:
         message:
           morning: 'Good morning!'
+
+toc:
+  enable: true
+  clickable: true
