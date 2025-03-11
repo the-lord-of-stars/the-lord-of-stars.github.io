@@ -161,14 +161,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/academic/" style="color: #ff7d73">
+                <a href="/tags/academic/" style="color: #00a596">
                     academic
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/review/" style="color: #00a596">
+                <a href="/tags/review/" style="color: #ff7d73">
                     review
                 </a>
             </span>
@@ -566,17 +566,17 @@
 		// inherit memeplex using simple inheritance method
 		inheritance.performMemeticInheritance(p1, p2, c1, c2);
 
-		// mutation
+    // mutation of memeplex (innovation)
+		performMutationOfMemeplex(c1);
+		performMutationOfMemeplex(c2);
+    
+		// mutation (change iom)
 		applyMutationForChildDependentOnMeme(c1, 0);
 		applyMutationForChildDependentOnMeme(c2, 0);
 
 		// local search
 		applyLocalSearchForChildDependentOnMeme(c1, 1, 2);
 		applyLocalSearchForChildDependentOnMeme(c2, 1, 2);
-
-		// mutation of memeplex
-		performMutationOfMemeplex(c1);
-		performMutationOfMemeplex(c2);
 	&#125;
 		
 	// perform replacement
@@ -622,6 +622,23 @@ public void performMutationOfMemeplex(int solutionIndex) &#123;
 	&#125;
 &#125;
 </code></pre>
+<h3 id="Lab-Quiz-5"><a href="#Lab-Quiz-5" class="headerlink" title="Lab Quiz"></a>Lab Quiz</h3><p>This week lab is focusing on the multi-meme algorithm.</p>
+<p><strong>Initialization</strong></p>
+<ul>
+<li>Generate an initial population where each individual is assigned a <strong>memeplex</strong>.</li>
+</ul>
+<p><strong>Iterative Evolution (for MaxGenerations)</strong></p>
+<ul>
+<li><strong>Selection &amp; Crossover</strong>: Select parents (e.g., tournament selection) and perform crossover while <strong>inheriting memes</strong>.</li>
+<li><strong>Innovation-Based Meme Mutation</strong>: With probability dependent on the <strong>innovation rate</strong>, modify memes in offspring.</li>
+<li><strong>Genetic Mutation</strong>: Apply standard mutation to offspring, influenced by the inherited memeplex.</li>
+<li><strong>Local Search</strong>: Offspring undergo local search using an operator dictated by their memeplex.</li>
+<li><strong>Population Replacement</strong>: Update the population while preserving diversity.</li>
+</ul>
+<p><strong>Termination</strong></p>
+<ul>
+<li>Stop when a convergence criterion is met (e.g., best fitness stagnation, max iterations).</li>
+</ul>
 
     </div>
     
