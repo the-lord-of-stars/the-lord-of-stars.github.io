@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="717b3130-035b-4e2f-8230-f28a9c90e7de" name="Changes" comment="Update the blog post">
+      <change afterPath="$PROJECT_DIR$/source/_posts/live2d-experience.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/hello-world.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/hello-world.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/prediction-AIM-lab-quiz.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/prediction-AIM-lab-quiz.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/source/js/fireworks.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/source/js/fireworks.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,8 +123,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.server" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.clean" />
         <item itemvalue="npm.server" />
       </list>
@@ -166,6 +163,9 @@
       <workItem from="1740933202476" duration="5748000" />
       <workItem from="1740942186252" duration="11998000" />
       <workItem from="1741275424906" duration="7869000" />
+      <workItem from="1741700068104" duration="4331000" />
+      <workItem from="1741704766789" duration="1767000" />
+      <workItem from="1741706888472" duration="277000" />
     </task>
     <task id="LOCAL-00002" summary="Update the blog post">
       <created>1740938947035</created>
@@ -198,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740964871902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update the blog post">
+      <option name="closed" value="true" />
+      <created>1741700124949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741700124949</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

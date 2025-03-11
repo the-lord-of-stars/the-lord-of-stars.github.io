@@ -1,5 +1,5 @@
 ---
-title: AIM Lab CW1 Prediction
+title: AIM Lab CW1 Review
 
 date: 2025-03-03
 
@@ -9,6 +9,8 @@ tags:
 
 description: |
     This is the prediction for the AIM Lab Quiz. I will gather all the key information in the previous lab quiz and provide a prediction for the exam.
+
+pinned: 1
 ---
 
 ## Week 1
@@ -439,8 +441,8 @@ public void runMainLoop() {
 
 		// inherit memeplex using simple inheritance method
 		inheritance.performMemeticInheritance(p1, p2, c1, c2);
-
-    // mutation of memeplex (innovation)
+        
+        // mutation of memeplex (innovation)
 		performMutationOfMemeplex(c1);
 		performMutationOfMemeplex(c2);
     
@@ -516,6 +518,46 @@ This week lab is focusing on the multi-meme algorithm.
 **Termination**
 
 - Stop when a convergence criterion is met (e.g., best fitness stagnation, max iterations).
+
+  
+
+1. Q2:
+
+   No innovation for current solution, so the diversity will drop really fast.
+
+2. Q3:
+
+   - The performance of the MMA with innovation rate = 1.0 could be better than that with innovation rate = 0.0 for solving MAX-SAT instance 5 because there is more chance to select a good meme option.
+   - It still might generate the best meme option
+   - It is impossible to inherit the same meme option
+   - And of course it still have a local searching part unlike the random walk
+
+3. Q5:
+
+   The most beneficial here just means choose an approach under this specific circumstance.
+
+   And the numebr of Meme1 should be like:
+
+   |     Approach     | allele frequencies |
+   | :--------------: | :----------------: |
+   | M_1A_0 (DBHC OI) |        9149        |
+   | M_1A_1 (DBHC IE) |        7752        |
+   | M_1A_2 (SDHC OI) |        3343        |
+   | M_1A_3 (SDHC IE) |        4804        |
+
+   And you can see the frequency of the DBHC OI is the most frequent one.
+
+4. Q6:
+
+   This one is not different as the last one, becasue this is an in general case and of course you can see that we can not decide which is the best.
+
+5. Q7:
+
+   Unlike last question, this one just gives 2 abtract solution, so it is possible to decide which is the best and from the data, you can easily draw the conclusion.
+
+6. Q8:
+
+   This question is focused on the search depth, you can not know that if DBHC_OI can find the best only with depth 4 data. And the answer is appearantly false.
 
 
 

@@ -1,55 +1,57 @@
 
-# 我的博客
+# My Blog
 
-## 简介
-欢迎来到我的个人博客！这是一个记录技术学习、分享生活感悟以及探索有趣话题的地方。
+## About
+Welcome to my personal blog! It's a place to document technical learning, share life insights, and explore interesting topics.
 
-无论是代码、文章还是工具分享，我的博客旨在为自己和读者提供价值，同时记录自己的成长之路。
+Whether it's code, articles, or tool sharing, my blog aims to provide value to myself and my readers while documenting my own growth.
 
-## 技术栈
-- **框架**：Hexo
-- **主题**：响应式设计，简洁而优雅
-- **部署**：GitHub Pages
+## Stack
+- **Frame**：Hexo
+- **Theme**：Particle X
+- **Deployment**：GitHub Pages
 
-## 功能
-- 支持 Markdown 编写文章
-- 分类与标签功能，轻松管理文章
-- 自定义主题与样式
+## Functions
+- Support for Markdown and HTML
+- Syntax highlighting
+- Code snippet highlighting
+- Live2d widget
+- Searching and indexing
 
 
-## 本地运行
-以下是如何在本地运行博客的步骤：
+## Running locally
+Here are the steps to run the blog locally:
 
-1. **克隆仓库**
+1. **clone the repository and install the theme**
    ```bash
    git clone https://github.com/your-username/your-blog-repo.git
    ```
 
-2. **进入项目目录**
+2. **get into the directory**
    ```bash
    cd your-blog-repo
    ```
 
-3. **安装依赖**
+3. **install the dependencies**
    ```bash
    npm install
    ```
 
-4. **启动本地开发服务器**
-   如果使用 Hexo：
+4. **run the blog**
+   if using Hexo：
    ```bash
    hexo server
    ```
-   然后打开浏览器，访问 `http://localhost:4000`。
+   then open your browser，got to `http://localhost:4000`。
 
-## 部署
-博客已经通过 [GitHub Pages](https://pages.github.com/) 自动部署。
+## deployment
+The blog is deployed to [GitHub Pages](https://pages.github.com/) automatically.
+Here is the link to [My Blog](https://the-lord-of-stars.github.io/).
 
 
-## 贡献
-欢迎对我的博客提出建议和改进意见！  
-如果发现任何问题，可以通过 Issue 提交反馈。
+## Contribution
+If you have any suggestions or want to contribute to the blog, feel free chat with me in my comment area in the blog.
 
 ---
 
-感谢你的访问！希望我的博客能为你带来灵感或帮助 😊
+Thanks for reading!
