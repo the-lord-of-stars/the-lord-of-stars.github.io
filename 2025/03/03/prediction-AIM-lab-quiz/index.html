@@ -565,8 +565,8 @@
 
 		// inherit memeplex using simple inheritance method
 		inheritance.performMemeticInheritance(p1, p2, c1, c2);
-
-    // mutation of memeplex (innovation)
+        
+        // mutation of memeplex (innovation)
 		performMutationOfMemeplex(c1);
 		performMutationOfMemeplex(c2);
     
@@ -639,6 +639,57 @@ public void performMutationOfMemeplex(int solutionIndex) &#123;
 <ul>
 <li>Stop when a convergence criterion is met (e.g., best fitness stagnation, max iterations).</li>
 </ul>
+<ol>
+<li><p>Q2:</p>
+<p>No innovation for current solution, so the diversity will drop really fast.</p>
+</li>
+<li><p>Q3:</p>
+<ul>
+<li>The performance of the MMA with innovation rate &#x3D; 1.0 could be better than that with innovation rate &#x3D; 0.0 for solving MAX-SAT instance 5 because there is more chance to select a good meme option.</li>
+<li>It still might generate the best meme option</li>
+<li>It is impossible to inherit the same meme option</li>
+<li>And of course it still have a local searching part unlike the random walk</li>
+</ul>
+</li>
+<li><p>Q5:</p>
+<p>The most beneficial here just means choose an approach under this specific circumstance.</p>
+<p>And the numebr of Meme1 should be like:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Approach</th>
+<th align="center">allele frequencies</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">M_1A_0 (DBHC OI)</td>
+<td align="center">9149</td>
+</tr>
+<tr>
+<td align="center">M_1A_1 (DBHC IE)</td>
+<td align="center">7752</td>
+</tr>
+<tr>
+<td align="center">M_1A_2 (SDHC OI)</td>
+<td align="center">3343</td>
+</tr>
+<tr>
+<td align="center">M_1A_3 (SDHC IE)</td>
+<td align="center">4804</td>
+</tr>
+</tbody></table>
+<p>And you can see the frequency of the DBHC OI is the most frequent one.</p>
+</li>
+<li><p>Q6:</p>
+<p>This one is not different as the last one, becasue this is an in general case and of course you can see that we can not decide which is the best.</p>
+</li>
+<li><p>Q7:</p>
+<p>Unlike last question, this one just gives 2 abtract solution, so it is possible to decide which is the best and from the data, you can easily draw the conclusion.</p>
+</li>
+<li><p>Q8:</p>
+<p>This question is focused on the search depth, you can not know that if DBHC_OI can find the best only with depth 4 data. And the answer is appearantly false.</p>
+</li>
+</ol>
 
     </div>
     
