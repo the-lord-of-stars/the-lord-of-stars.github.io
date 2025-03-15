@@ -82,6 +82,11 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -127,6 +132,15 @@
                     </div>
                 </a>
                 
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </nav>
@@ -143,7 +157,7 @@
         
         
         <span>
-            <a href="/tags/academic/" style="background: #ffa2c4">
+            <a href="/tags/academic/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -167,7 +181,7 @@
         
         
         <span>
-            <a href="/tags/code/" style="background: #00bcd4">
+            <a href="/tags/code/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -178,7 +192,7 @@
         
         
         <span>
-            <a href="/tags/art/" style="background: #ffa2c4">
+            <a href="/tags/art/" style="background: #00bcd4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -193,10 +207,19 @@
         <div class="timeline-tail"></div>
         <div class="timeline-content">
             <div class="item-time">2025/3/3</div>
-            <a href="/2025/03/03/prediction-AIM-lab-quiz/">
+            <a href="/2025/03/03/study/prediction-AIM-lab-quiz/">
                 <h3>AIM Lab CW1 Review</h3>
             </a>
             <div class="info">
+                
+                <span class="category">
+                    <a href="/categories/Study/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        Study
+                    </a>
+                </span>
                 
                 
                 <span class="tags">
@@ -207,14 +230,14 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/academic/" style="color: #00bcd4">
+                        <a href="/tags/academic/" style="color: #00a596">
                             academic
                         </a>
                     </span>
                     
                     <span class="tag">
                         
-                        <a href="/tags/review/" style="color: #ffa2c4">
+                        <a href="/tags/review/" style="color: #ff7d73">
                             review
                         </a>
                     </span>

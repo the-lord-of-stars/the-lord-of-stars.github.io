@@ -86,6 +86,11 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -131,6 +136,15 @@
                     </div>
                 </a>
                 
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </nav>
@@ -152,6 +166,15 @@
             2025/3/3
         </span>
         
+        <span class="category">
+            <a href="/categories/Study/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Study
+            </a>
+        </span>
+        
         
         <span class="tags">
             <span class="icon">
@@ -161,14 +184,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/academic/" style="color: #ffa2c4">
+                <a href="/tags/academic/" style="color: #00bcd4">
                     academic
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/review/" style="color: #ff7d73">
+                <a href="/tags/review/" style="color: #00a596">
                     review
                 </a>
             </span>
@@ -720,7 +743,7 @@ public void performMutationOfMemeplex(int solutionIndex) &#123;
 <p>And you can see the frequency of the DBHC OI is the most frequent one.</p>
 </li>
 <li><p>Q6:</p>
-<p>This one is not different as the last one, becasue this is an in general case and of course you can see that we can not decide which is the best.</p>
+<p>This one is different as the last one, becasue this is an in general case and of course you can see that we can not decide which is the best.</p>
 </li>
 <li><p>Q7:</p>
 <p>Unlike last question, this one just gives 2 abtract solution, so it is possible to decide which is the best and from the data, you can easily draw the conclusion.</p>
