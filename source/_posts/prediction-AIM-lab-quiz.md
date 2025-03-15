@@ -23,7 +23,7 @@ pinned: 1
 
 ## week 1 
 
-### lab code
+### lab code 1
 The RandomBitFlipHeuristic:
 ```java
 public void applyHeuristic(SAT problem) {
@@ -33,7 +33,7 @@ public void applyHeuristic(SAT problem) {
 }
 ```
 
-### lab quiz
+### lab quiz 1
 In week1, the lab quiz was just all about the introduction of the api and the basis for the question, the Max-SAT problem concept.
 
 1. **Max-SAT** is a problem in computer science that involves finding a solution to a boolean satisfiability problem (SAT) by finding a subset of the variables that satisfy all the clauses in the SAT problem. The goal is to find a solution that maximizes the number of satisfied clauses. The Max-SAT problem is NP-complete, meaning that it is not possible to solve in polynomial time for all possible inputs. However, there are many heuristics that can be used to solve the problem efficiently in practice.
@@ -42,7 +42,7 @@ In week1, the lab quiz was just all about the introduction of the api and the ba
 
 2. In the lab, a very important concept of the **Random** was given. That is the value of the random function is not actually random, but is determined by a seed value. This seed value is used to generate a sequence of pseudo-random numbers that can be used for various purposes, such as generating random numbers, selecting random elements from a set, and shuffling a list. The seed value can be set to a fixed value to produce a deterministic sequence of pseudo-random numbers, or it can be set to a random value to produce a different sequence each time the program is run. Therefore, if the seed value is not changed in each trial, it will always give us the same solution. 
 
-### question quiz
+### question quiz 1
 
 1. **Concept**:
    
@@ -68,7 +68,7 @@ In week1, the lab quiz was just all about the introduction of the api and the ba
 
 ## week 2
 
-### lab code
+### lab code 2
 Steepest Descent Hill Climbing:
 ```java
 public void applyHeuristic(SAT problem) {
@@ -118,7 +118,7 @@ public void applyHeuristic(SAT problem) {
 }
 ```
 
-### lab quiz
+### lab quiz 2
 In week2, the lab is focusing on Steepest Descent Hill Climbing and Davis's Bit Hill Climbing.
 
 1. **Steepest Descent Hill Climbing** is a local search algorithm that starts with a random solution and only change the most significant bit that decreases the objective function value. It is a simple and effective algorithm that can find a good solution in a short time. However, it may not find the global optimum.
@@ -132,7 +132,7 @@ For DBHC this includes not getting stuck on shoulder regions, whereas for SDHC t
 
 ## week 3
 
-### lab code
+### lab code 3
 Iterated Local Search:
 ```java
 protected void runMainLoop() {
@@ -156,7 +156,7 @@ protected void runMainLoop() {
 }
 ```
 
-### lab quiz
+### lab quiz 3
 
 In week 3, the lab is focusing on iterated local search.
 
@@ -194,7 +194,7 @@ In week 3, the lab is focusing on iterated local search.
 
 ## week 4
 
-### lab code
+### lab code 4
 Simulated Annealing:
 ```java
 protected void runMainLoop() {
@@ -234,7 +234,7 @@ public void advanceTemperature() {
 }
 ```
 
-### lab quiz
+### lab quiz 4
 
 This week lab is relative simple, it is only focusing on the Simulated Annealing: 
 
@@ -247,7 +247,7 @@ The key to solve the quiz is that the alpha for geometric cooling schema should 
 
 ## week 5
 
-### lab code
+### lab code 5
 Memetic Algorithm:
 ```java
 public void runMainLoop() {
@@ -358,7 +358,7 @@ protected int[] getNextGeneration(SAT oProblem, int iPopulationSize) {
 	}
 ```
 
-### lab quiz
+### lab quiz 5
 
 This week lab is focusing on the genetic algorithm:
 
@@ -398,7 +398,7 @@ This week lab is focusing on the genetic algorithm:
 
 ## week 6
 
-### lab code
+### lab code 6
 
 Simple Inheritance:
 
@@ -507,7 +507,7 @@ public void performMutationOfMemeplex(int solutionIndex) {
 }
 ```
 
-### lab quiz
+### lab quiz 6
 
 This week lab is focusing on the multi-meme algorithm.
 
@@ -557,7 +557,7 @@ This week lab is focusing on the multi-meme algorithm.
 
 4. Q6:
 
-   This one is not different as the last one, becasue this is an in general case and of course you can see that we can not decide which is the best.
+   This one is different as the last one, becasue this is an in general case and of course you can see that we can not decide which is the best.
 
 5. Q7:
 
