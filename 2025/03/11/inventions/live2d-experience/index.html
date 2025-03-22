@@ -184,7 +184,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/art/" style="color: #00bcd4">
+                <a href="/tags/art/" style="color: #ffa2c4">
                     art
                 </a>
             </span>
@@ -197,6 +197,7 @@
         <script src="https://cdn.jsdelivr.net/npm/oh-my-live2d@latest"></script>
 <script>
   OML2D.loadOml2d({
+   mobileDisplay: true,
    models: [{
         path: 'https://raw.githubusercontent.com/the-lord-of-stars/warehouse/main/model/duck_model/duck.model3.json',
         position: [0, 0],
@@ -216,8 +217,11 @@
    tips: {
         style: {
                display: 'none',
-               }
+               },
+        mobileStyle: {
+               display: 'none',
         },
+   },       
    menus: {
         style: {
                marginRight: '20px',
