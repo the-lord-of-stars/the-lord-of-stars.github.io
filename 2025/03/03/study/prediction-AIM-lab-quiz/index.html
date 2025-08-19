@@ -154,7 +154,15 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
+            <div id="container__">
+    
+    <div id="toc">
+        <span class="toc_title">Menu</span>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#week-1"><span class="toc-text">week 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-code-1"><span class="toc-text">lab code 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-quiz-1"><span class="toc-text">lab quiz 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#question-quiz-1"><span class="toc-text">question quiz 1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week-2"><span class="toc-text">week 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-code-2"><span class="toc-text">lab code 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-quiz-2"><span class="toc-text">lab quiz 2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week-3"><span class="toc-text">week 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-code-3"><span class="toc-text">lab code 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-quiz-3"><span class="toc-text">lab quiz 3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week-4"><span class="toc-text">week 4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-code-4"><span class="toc-text">lab code 4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-quiz-4"><span class="toc-text">lab quiz 4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week-5"><span class="toc-text">week 5</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-code-5"><span class="toc-text">lab code 5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-quiz-5"><span class="toc-text">lab quiz 5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#week-6"><span class="toc-text">week 6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-code-6"><span class="toc-text">lab code 6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lab-quiz-6"><span class="toc-text">lab quiz 6</span></a></li></ol></li></ol>
+        <link rel="stylesheet" type="text/css" href="/css/toc.css">
+    </div>
+
+<div class="article">
     <div>
         <h1>AIM Lab CW1 Review</h1>
     </div>
@@ -184,7 +192,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/academic/" style="color: #00a596">
+                <a href="/tags/academic/" style="color: #ff7d73">
                     academic
                 </a>
             </span>
@@ -201,46 +209,7 @@
     </div>
     
     <div class="content" v-pre>
-        <hr>
-<!-- toc -->
-
-<ul>
-<li><a href="#week-1">week 1</a><ul>
-<li><a href="#lab-code-1">lab code 1</a></li>
-<li><a href="#lab-quiz-1">lab quiz 1</a></li>
-<li><a href="#question-quiz-1">question quiz 1</a></li>
-</ul>
-</li>
-<li><a href="#week-2">week 2</a><ul>
-<li><a href="#lab-code-2">lab code 2</a></li>
-<li><a href="#lab-quiz-2">lab quiz 2</a></li>
-</ul>
-</li>
-<li><a href="#week-3">week 3</a><ul>
-<li><a href="#lab-code-3">lab code 3</a></li>
-<li><a href="#lab-quiz-3">lab quiz 3</a></li>
-</ul>
-</li>
-<li><a href="#week-4">week 4</a><ul>
-<li><a href="#lab-code-4">lab code 4</a></li>
-<li><a href="#lab-quiz-4">lab quiz 4</a></li>
-</ul>
-</li>
-<li><a href="#week-5">week 5</a><ul>
-<li><a href="#lab-code-5">lab code 5</a></li>
-<li><a href="#lab-quiz-5">lab quiz 5</a></li>
-</ul>
-</li>
-<li><a href="#week-6">week 6</a><ul>
-<li><a href="#lab-code-6">lab code 6</a></li>
-<li><a href="#lab-quiz-6">lab quiz 6</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-
-<hr>
-<h2 id="week-1"><a href="#week-1" class="headerlink" title="week 1"></a>week 1</h2><h3 id="lab-code-1"><a href="#lab-code-1" class="headerlink" title="lab code 1"></a>lab code 1</h3><p>The RandomBitFlipHeuristic:</p>
+        <h2 id="week-1"><a href="#week-1" class="headerlink" title="week 1"></a>week 1</h2><h3 id="lab-code-1"><a href="#lab-code-1" class="headerlink" title="lab code 1"></a>lab code 1</h3><p>The RandomBitFlipHeuristic:</p>
 <pre><code class="language-java">public void applyHeuristic(SAT problem) &#123;
     // Select a random bit to flip
    int randomIndex = random.nextInt(problem.getNumberOfVariables());
@@ -765,6 +734,8 @@ public void performMutationOfMemeplex(int solutionIndex) &#123;
     
     
     
+</div>
+
 </div>
 
             <footer id="footer">
