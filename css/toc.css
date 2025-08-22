@@ -8,23 +8,19 @@
 }
 #ic{
     position: relative;
-    left: 20px;
+    right: 20px;
     font-size: 30px;
 }
 #toc{
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.871);
-    box-shadow: 1px 1px 5px rgb(234, 234, 234);
-
     position: sticky;
     top: 100px;
-    left: 30px;
+    left: 10px;
 
     overflow: auto;
 
     max-height: 600px;
-    width: 280px;
-    min-width: none;
+    width: 20%;
+
 
     flex-shrink: 100;
 }
@@ -43,14 +39,19 @@
     list-style: none;
     margin-top: 2px;
     position: relative;
-    right: 10px;
+    left: 10px;
 }
 #toc ol{
     list-style: none;
     margin-top: 2px;
     position: relative;
-    right: 10px;
+    leftt: 10px;
 }
+
+@media (max-width: 768px) {
+    #toc { display: none; }
+}
+
 #container__{
     display: flex;
     justify-content: center;
