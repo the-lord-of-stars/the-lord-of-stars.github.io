@@ -159,4 +159,10 @@ OhMyLive2d:
 
 toc:
   enable: true
-  clickable: true
+  class: toc
+  slugify: transliteration
+  decodeEntities: false
+  anchor:
+    position: after
+    symbol: '#'
+    style: header-anchor

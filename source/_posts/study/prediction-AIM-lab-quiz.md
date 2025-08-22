@@ -3,6 +3,11 @@ title: AIM Lab CW1 Review
 
 date: 2025-03-03
 
+categories:
+   - study
+
+toc: true
+
 tags:
 - academic
 - review
@@ -10,14 +15,7 @@ tags:
 description: |
     This is the prediction for the AIM Lab Quiz. I will gather all the key information in the previous lab quiz and provide a prediction for the exam.
 
-pinned: 1
 ---
-
-------
-
-<!-- toc -->
-
-------
 
 
 

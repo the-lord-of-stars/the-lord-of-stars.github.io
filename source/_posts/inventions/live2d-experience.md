@@ -3,6 +3,9 @@ title: Live2D Experience
 
 date: 2025-03-11
 
+categories:
+  - project
+
 tags:
 - art
 

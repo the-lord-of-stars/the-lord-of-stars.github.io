@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="717b3130-035b-4e2f-8230-f28a9c90e7de" name="Changes" comment="Update the blog post">
+      <change afterPath="$PROJECT_DIR$/source/_posts/project/quarto.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/particlex/layout/toc.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/particlex/source/css/toc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/particlex/source/images/avatar1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/prediction-AIM-lab-quiz.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/prediction-AIM-lab-quiz.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/hello-world.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/hello-world.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/live2d-experience.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/inventions/live2d-experience.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/prediction-AIM-lab-quiz.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/study/prediction-AIM-lab-quiz.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/archives.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/archives.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/layout.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/post.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/posts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/posts.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/source/images/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/particlex/source/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/source/images/background.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +43,7 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/particlex" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -74,10 +91,13 @@
       <recent name="C:\Users\q星空之主p\Desktop\Homework\project\blog\source\categories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/_posts/study" />
+      <recent name="$PROJECT_DIR$/source/_posts/invention" />
+      <recent name="$PROJECT_DIR$/themes/particlex/source/images" />
       <recent name="C:\Users\q星空之主p\Desktop\Homework\project\blog\themes\particlex\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.server">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -120,9 +140,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.server" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.server" />
         <item itemvalue="npm.clean" />
         <item itemvalue="npm.server" />
       </list>
@@ -135,6 +155,12 @@
         <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="true">
+    <option name="groupingKeys">
+      <option value="module" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -166,6 +192,8 @@
       <workItem from="1741706888472" duration="4492000" />
       <workItem from="1741712142123" duration="3260000" />
       <workItem from="1741880892889" duration="2095000" />
+      <workItem from="1755596137048" duration="5661000" />
+      <workItem from="1755830054143" duration="735000" />
     </task>
     <task id="LOCAL-00002" summary="Update the blog post">
       <created>1740938947035</created>
