@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="717b3130-035b-4e2f-8230-f28a9c90e7de" name="Changes" comment="Update the blog post">
-      <change afterPath="$PROJECT_DIR$/source/_posts/project/quarto.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/particlex/layout/toc.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/particlex/source/css/toc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/particlex/source/images/avatar1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/hello-world.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/hello-world.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/live2d-experience.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/inventions/live2d-experience.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/prediction-AIM-lab-quiz.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/study/prediction-AIM-lab-quiz.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/archives.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/archives.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/post.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/layout/posts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/layout/posts.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/source/images/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/particlex/source/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/particlex/source/images/background.jpg" afterDir="false" />
-    </list>
+    <list default="true" id="717b3130-035b-4e2f-8230-f28a9c90e7de" name="Changes" comment="Update framework" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,9 +21,10 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$/themes/particlex" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/particlex" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -98,6 +79,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.server">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="the-lord-of-stars.github.io" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="the-lord-of-stars.github.io" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -250,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741712393262</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update framework">
+      <option name="closed" value="true" />
+      <created>1763601226898</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1763601226898</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +273,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add initial page." />
     <MESSAGE value="Update the blog post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the blog post" />
+    <MESSAGE value="Update framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update framework" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
