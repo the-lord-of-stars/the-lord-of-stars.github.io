@@ -41,10 +41,16 @@ Require-Text '_pages/about.md' 'prof_pic\.jpg' 'profile portrait reference'
 Require-Text '_pages/cv.md' '/assets/pdf/Zefei_Xie_CV\.pdf' 'CV asset reference'
 Require-Text '_config.yml' '(?m)^serve_og_meta: true\r?$' 'Open Graph metadata'
 Require-Text '_config.yml' '(?m)^serve_schema_org: true\r?$' 'Schema.org metadata'
+Require-Text '_config.yml' '(?m)^icon: favicon-32x32\.png\r?$' 'Poké Ball favicon configuration'
+Require-Text '_config.yml' '(?m)^apple_touch_icon: apple-touch-icon\.png\r?$' 'Poké Ball Apple touch icon configuration'
 $portraitPath = Join-Path $repoRoot 'assets/img/prof_pic.jpg'
 $cvPath = Join-Path $repoRoot 'assets/pdf/Zefei_Xie_CV.pdf'
+$faviconPath = Join-Path $repoRoot 'assets/img/favicon-32x32.png'
+$touchIconPath = Join-Path $repoRoot 'assets/img/apple-touch-icon.png'
 if (-not (Test-Path $portraitPath)) { $failures.Add('Missing portrait asset') }
 if (-not (Test-Path $cvPath)) { $failures.Add('Missing CV asset') }
+if (-not (Test-Path $faviconPath)) { $failures.Add('Missing Poké Ball favicon asset') }
+if (-not (Test-Path $touchIconPath)) { $failures.Add('Missing Poké Ball Apple touch icon asset') }
 $publishedFiles = Get-ChildItem $repoRoot -Recurse -File | Where-Object {
   $_.FullName -notmatch '[\\/]\.git[\\/]' -and
   $_.FullName -notmatch '[\\/]docs[\\/]superpowers[\\/]' -and
