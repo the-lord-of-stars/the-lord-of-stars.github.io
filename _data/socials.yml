@@ -7,7 +7,3 @@ linkedin_username: zefei-xie-023644339
 cv_pdf: /assets/pdf/Zefei_Xie_CV.pdf
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-custom_social:
-  logo: /assets/img/personal-site.svg
-  title: Personal Site
-  url: https://www.zefei.site
