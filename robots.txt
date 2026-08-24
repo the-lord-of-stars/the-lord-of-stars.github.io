@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://the-lord-of-stars.github.io/sitemap.xml
