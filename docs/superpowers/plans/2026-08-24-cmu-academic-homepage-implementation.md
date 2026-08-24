@@ -37,11 +37,13 @@
 ### Task 1: Import al-folio While Preserving History
 
 **Files:**
+
 - Replace: legacy Hexo site files
 - Import: starter files from `upstream/main`
 - Preserve: `docs/superpowers/**`
 
 **Interfaces:**
+
 - Consumes: fetched `upstream/main`
 - Produces: al-folio starter on `codex/cmu-academic-homepage`, descended from `origin/master`
 
@@ -66,10 +68,12 @@ Run `git add -A` and `git commit -m "build: replace legacy site with al-folio"`.
 ### Task 2: Configure Identity, Navigation, Privacy, and Routes
 
 **Files:**
+
 - Modify: `_config.yml`, `_data/socials.yml`, `_pages/about.md`, `_pages/publications.md`, `_pages/projects.md`, `_pages/cv.md`, `_pages/404.md`
 - Create: `_pages/experience.md`, `_pages/personal-site.md`, `test/site_content_contract.ps1`
 
 **Interfaces:**
+
 - Produces: `/`, `/publications/`, `/experience/`, `/projects/`, `/cv/`, and external `Personal Site`
 
 - [ ] **Step 1: Write the failing contract**
@@ -97,11 +101,13 @@ Run the contract; expect PASS. Commit with `git commit -m "feat: configure acade
 ### Task 3: Add Academic and Professional Content
 
 **Files:**
+
 - Modify: `_pages/about.md`, `_pages/experience.md`, `_bibliography/papers.bib`
 - Replace: `_news/*.md`, `_projects/*.md`
 - Modify: `test/site_content_contract.ps1`
 
 **Interfaces:**
+
 - Consumes: supplied CV, existing site, verified public links
 - Produces: biography, research interests, two papers, three experiences, news, and three projects
 
@@ -134,10 +140,12 @@ Run the contract; expect PASS. Commit with `git commit -m "content: add research
 ### Task 4: Add Approved Assets and Documentation
 
 **Files:**
+
 - Create: `assets/img/prof_pic.jpg`, `assets/pdf/Zefei_Xie_CV.pdf`
 - Modify: `_config.yml`, `_pages/about.md`, `_data/socials.yml`, `README.md`, `test/site_content_contract.ps1`
 
 **Interfaces:**
+
 - Consumes: supplied JPG and PDF
 - Produces: stable public portrait/CV paths and maintenance guide
 
@@ -166,10 +174,12 @@ Run the contract; expect PASS. Commit with `git commit -m "feat: add profile ass
 ### Task 5: Validate Production Quality
 
 **Files:**
+
 - Modify only files implicated by failures
 - Test: generated `_site/`
 
 **Interfaces:**
+
 - Produces: locally verified production site
 
 - [ ] **Step 1: Install locked dependencies**
@@ -201,9 +211,11 @@ Rerun the smallest affected check after each fix, then the full static suite and
 ### Task 6: Review, Publish, and Verify Deployment
 
 **Files:**
+
 - No planned source changes
 
 **Interfaces:**
+
 - Produces: deployed GitHub Pages site with recovery point
 
 - [ ] **Step 1: Final clean verification**
