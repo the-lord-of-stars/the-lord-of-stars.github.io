@@ -95,7 +95,7 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: false
 socials_in_search: false
 posts_in_search: false
@@ -142,7 +142,7 @@ lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
   enabled: true
@@ -172,17 +172,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -340,13 +330,13 @@ terser:
 
 jekyll-archives:
   posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: []
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
   books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: []
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog

@@ -2,8 +2,6 @@
 layout: about
 title: about
 permalink: /
-nav: true
-nav_order: 1
 subtitle: M.S. Student in Intelligent Information Systems at <a href='https://www.cmu.edu/'>Carnegie Mellon University</a>
 
 profile:
@@ -26,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming M.S. student in Intelligent Information Systems at Carnegie Mellon University's School of Computer Science. I completed my B.Sc. (Hons) in Computer Science with Artificial Intelligence at the University of Nottingham with First-Class Honours.
+I am an M.S. student in Intelligent Information Systems at Carnegie Mellon University's School of Computer Science. I completed my B.Sc. (Hons) in Computer Science with Artificial Intelligence at the University of Nottingham with First-Class Honours.
 
 My work sits at the intersection of **agentic AI, large language model systems, retrieval-augmented generation, human-AI collaboration, and data visualization**. I am interested in building AI systems that expose their reasoning process, incorporate human direction, and produce reliable evidence-backed results.
 
