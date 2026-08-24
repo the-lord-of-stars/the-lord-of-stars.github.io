@@ -3,9 +3,9 @@ layout: page
 title: AwesomeLit
 description: Human-AI collaborative literature exploration and hypothesis generation.
 importance: 1
-category: research
+category: Research
 permalink: /projects/awesomelit/
-related_publications: true
+related_publications: false
 ---
 
 AwesomeLit is a human-AI research system that helps early-stage researchers explore unfamiliar literature, understand provenance, identify gaps, and develop feasible hypotheses.

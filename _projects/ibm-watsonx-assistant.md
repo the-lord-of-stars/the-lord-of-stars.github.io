@@ -3,7 +3,7 @@ layout: page
 title: IBM Watsonx AI Assistant
 description: Retrieval-augmented assistant for new university students.
 importance: 3
-category: engineering
+category: Engineering
 permalink: /projects/ibm-watsonx-assistant/
 related_publications: false
 ---

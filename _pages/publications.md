@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: Peer-reviewed publications and technical reports by Zefei Xie.
 nav: true
 nav_order: 2

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: experience
+title: Experience
 permalink: /experience/
 description: Research, engineering, and teaching experience.
 nav: true

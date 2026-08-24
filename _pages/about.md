@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: M.S. Student in Intelligent Information Systems at <a href='https://www.cmu.edu/'>Carnegie Mellon University</a>
 
@@ -10,11 +10,11 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info:
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -30,14 +30,22 @@ My work sits at the intersection of **agentic AI, large language model systems, 
 
 Before joining CMU, I worked on multimodal model deployment and efficient inference at Zhejiang Dahua Technology, built internal applications at NetEase Hangzhou Research Institute, and served as a teaching assistant at the University of Nottingham.
 
-## Research interests
+## Research Interests
 
 - **Agentic AI and LLM systems:** transparent, controllable workflows with tool use, retrieval, and iterative reasoning.
 - **Human-AI collaboration:** interfaces that help people inspect, steer, and trust AI-supported research.
 - **Data analysis and visualization:** systems that turn complex data and model outputs into actionable evidence.
 
-## Selected projects
+## Selected Projects
 
 - **[AwesomeLit](/projects/awesomelit/):** a human-AI system for literature exploration and research hypothesis generation.
-- **[AgenticInsight](/projects/agentic-insight/):** a multi-agent pipeline for autonomous data analysis and visualization.
+- **[IEEE VIS 2025 VISxGenAI Challenge](/projects/ieee-vis-genai-challenge/):** an agentic pipeline for autonomous data analysis and visualization that ranked Top 5 in the challenge.
 - **[IBM Watsonx AI Assistant](/projects/ibm-watsonx-assistant/):** a retrieval-augmented assistant for new university students.
+
+## News
+
+{% include news.liquid limit=true %}
+
+## Selected Publications
+
+{% include selected_papers.liquid %}
